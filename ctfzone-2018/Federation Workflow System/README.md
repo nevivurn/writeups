@@ -1,5 +1,5 @@
 # Federation Workflow System
-**Cagegory:** Crypto
+**Category:** Crypto
 > The source code for the Federation Workflow System has been leaked online this night.
 >
 > Our goal is to inspect it and gain access to their Top Secret documents.
