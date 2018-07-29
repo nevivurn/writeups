@@ -51,8 +51,8 @@ for i in range(3):
 ```
 
 Afterwards, we just calculate `phi` as the product of `p-1` for each prime, then
-find the multiplicative inverse of `e` modulo `phi`,  modular inverse, and we
-decrypt the ciphertext.
+find the multiplicative inverse of `e` modulo `phi`, and we decrypt the
+ciphertext.
 
 ```python
 phi = reduce(lambda a,b: a*(b-1), primes, 1)
