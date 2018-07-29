@@ -39,7 +39,7 @@ keyind =  unshuffle(keyind)
 ```
 
 Then, as usual, we can use the known plaintext `ISITDTU{` (8 characters) to find
-8 out of 10 characters of the key, trying all positive starting positions of the
+8 out of 10 characters of the key, trying all possible starting positions of the
 known plaintext.
 
 ```python
