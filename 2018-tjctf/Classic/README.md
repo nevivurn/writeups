@@ -15,11 +15,11 @@ The following code can factor the modulus very quickly:
 def fermat_factor(x):
     a = sqrt(n)
     b2 = a*a - n
-    
+
     while not check(b2):
         a += 1
         b2 = a*a - n
-    
+
     b = sqrt(b2)
 
     return (a+b, a-b)
