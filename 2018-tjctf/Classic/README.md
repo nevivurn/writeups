@@ -7,7 +7,24 @@ The public modulus is 1024, which wouldn't normally be practical to factor.
 However, since the primes are said to be "close", it's significantly easier to
 factor.
 
-> TODO: figure out exactly why (...)
+Edit: looking it up a bit, looks it can be easily done through [Fermat
+factorization](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method).
+The following code can factor the modulus very quickly:
+
+```python
+def fermat_factor(x):
+    a = sqrt(n)
+    b2 = a*a - n
+    
+    while not check(b2):
+        a += 1
+        b2 = a*a - n
+    
+    b = sqrt(b2)
+
+    return (a+b, a-b)
+
+```
 
 We use an online [integer factorization
 calculator](https://www.alpertron.com.ar/ECM.HTM) to factor the modulus, which
