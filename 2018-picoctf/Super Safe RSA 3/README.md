@@ -1,0 +1,29 @@
+# Super Safe RSA 3
+**Category:** Cryptography
+> The more primes, the safer.. right.?.? Connect with `nc 2018shell1.picoctf.com
+> 55431`.
+>
+> Hints:
+> - How would you find d if there are more than 2 prime factors of n?
+
+The answer to the hint is the same as it is the case in 2-prime rsa. As in, you
+calculate `phi(n)` and then find  `e^1 = d (mod n)`.
+
+The problem statement suggests that we have a multi-prime RSA, which is quite
+easier to factor. Using the [online
+factorizer](https://www.alpertron.com.ar/ECM.HTM), we can find the factorization
+in less than 5s.
+
+	$ nc 2018shell1.picoctf.com 55431
+	c: 2673498564151474475609365480291309642527966010783628869291435987263946996737194278547189713632397093886743989948903475798844019261483021816008504661335472048809828349015724670507367590803673854292000253189149741940026633616512443200890239012159461942420012901347014327773109746690269442707733211396341640
+	n: 7926036266014619131255378144421187309077826484907796831862975183434725764083561271749330578350079804535706687472017828714791306513867919430832693384458835716425730771502123260119370340721101931615905551786405876085127985263645633993108747114814384316216551835357320371347431394988291730670174024331918523
+	e: 65537
+
+```python
+import gmpy2
+from binascii import unhexlify
+print(unhexlify(hex(pow(c, gmpy2.invert(e, phi), n))[2:]).decode('utf-8'))
+# picoCTF{p_&_q_n0_r_$_t!!_5280799}
+```
+
+flag: `picoCTF{p_&_q_n0_r_$_t!!_5280799}`
