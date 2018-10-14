@@ -7,7 +7,7 @@
 > - How would you find d if there are more than 2 prime factors of n?
 
 The answer to the hint is the same as it is the case in 2-prime rsa. As in, you
-calculate `phi(n)` and then find  `e^1 = d (mod n)`.
+calculate `phi(n)` and then find  `e^-1 = d (mod n)`.
 
 The problem statement suggests that we have a multi-prime RSA, which is quite
 easier to factor. Using the [online
