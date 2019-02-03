@@ -13,7 +13,7 @@ miserably on the web problems...
 > 
 > 16 bit plaintext: b'0467a52afa8f15cfb8f0ea40365a6692' flag: b'04b34e5af4a1f5260f6043b8b9abb4f8'
 > 
-> [2fun.py](2fun.py)
+> [2fun.py](2FUN/2fun.py)
 
 The `fun` function encrypts a 16-byte block with a 3-byte key, with an XOR,
 bytewise substitution, and permutation. It's fairly easy to reverse, just apply
@@ -74,7 +74,7 @@ sys	0m1.920s
 ```
 
 - flag: `hackim19{1337_1n_m1ddl38f}`
-- solution: [2fun\_solution.go](2fun_solution.go)
+- solution: [2fun\_solution.go](2FUN/2fun_solution.go)
 
 ## GenuineCounterMode
 **Category**: Crypto
@@ -85,7 +85,7 @@ sys	0m1.920s
 > 
 > can you get the flag?
 > 
-> [server.py](server.py)
+> [server.py](GenuineCounterMode/server.py)
 
 The goal of this challenge is to produce a ciphertext that will decrypt to "may
 i please have the flag", but we are not allowed to encrypt the message "flag".
@@ -181,4 +181,4 @@ ciphertext and solve the challenge.
 ```
 
 - flag: `hackim19{forb1dd3n_made_e4sy_a7gh12}`
-- solution: [gcm\_solution.py](gcm_solution.py)
+- solution: [gcm\_solution.py](GenuineCounterMode/gcm_solution.py)
